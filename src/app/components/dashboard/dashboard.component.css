@@ -1,0 +1,80 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 10rem;
+  height: 100vh;
+}
+
+
+.link {
+  border-radius: 30%;
+  -webkit-border-radius: 30%;
+  -moz-border-radius: 30%;
+  -ms-border-radius: 30%;
+  -o-border-radius: 30%;
+  background-color: cyan;
+  margin: 1rem !important;
+  padding: auto;
+}
+
+mat-sidenav-container mat-list mat-list-item .text::before {
+  content: attr(text-box);
+  position: absolute;
+  color: var(--cotx);
+  overflow: hidden;
+  transition: 2s;
+  z-index: -1;
+  border-right: 5px solid var(--cotx);
+  -webkit-text-stroke: 1px var(--cotx);
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.example-container {
+  flex-grow: 1;
+}
+
+mat-sidenav-container {
+  height: 10rem;
+}
+
+.expample-container {
+  margin-top: 20px;
+}
+
+.collapse {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.custom-btn {
+  font-size: smaller;
+  border-radius: 100px;
+  padding: 0.5px 0.5px;
+}
+
+
+.material-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+mat-icon {
+  margin: 10px;
+  align-content: center
+}
+
+.adidas {
+  border: 10px;
+  border-color: yellow
+}

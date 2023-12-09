@@ -1,0 +1,139 @@
+/* Aggiungi stili di base alle card */
+.card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Stile per il contenitore principale */
+.create {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Stile per il titolo */
+.create h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Stile per l'immagine */
+.create img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stile per il testo */
+.create p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Stile per il contenitore */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Stile per le card */
+.card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Stile per il titolo della card */
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Stile per il testo della card */
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Stile per l'immagine della card */
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Stile per i pulsanti */
+.card button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+/* Stile per il pulsante "Elimina" */
+.card button.delete {
+  background-color: #dc3545;
+}
+
+
+/* Stili per l'immagine */
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Stili per il pulsante "Modifica" */
+.card button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Stili per il pulsante "Elimina" */
+.card button.delete {
+  background-color: #dc3545;
+}
+
+/* Stili per i campi di modifica */
+.card .edit-fields {
+  display: none;
+  margin-top: 10px;
+}
+
+/* Mostra i campi di modifica quando la card è in modalità di modifica */
+.card.editing .edit-fields {
+  display: block;
+}
+
+button {
+  margin-right: 10px;
+  background-color: #28a745;
+}
+
+button.cancel {
+  background-color: #dc3545;
+}
+
+.mod {
+  background-color: #ffc107;
+  color: #fff;
+}

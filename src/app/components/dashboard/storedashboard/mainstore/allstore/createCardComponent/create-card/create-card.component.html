@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>Nuova Card</h2>
+  <form>
+    <label>Nome:</label>
+    <input
+      type="text"
+      [(ngModel)]="newCard.name"
+      [ngModelOptions]="{ standalone: true }"
+      required
+    />
+
+    <label>Immagine:</label>
+    <input
+      type="text"
+      [(ngModel)]="newCard.imgSrc"
+      [ngModelOptions]="{ standalone: true }"
+      required
+    />
+
+    <label>Dettagli:</label>
+    <textarea
+      [(ngModel)]="newCard.detail"
+      [ngModelOptions]="{ standalone: true }"
+      required
+    ></textarea>
+
+    <label>Prezzo:</label>
+    <input
+      type="number"
+      [(ngModel)]="newCard.price"
+      [ngModelOptions]="{ standalone: true }"
+      required
+    />
+    <button type="button" (click)="createNewCard()">Crea Card</button>
+  </form>
+</div>

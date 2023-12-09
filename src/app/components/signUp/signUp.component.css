@@ -1,0 +1,22 @@
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.success-message {
+  max-width: 400px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #006400;
+  border-radius: 4px;
+  background-color: #c6f6d5;
+  color: #006400;
+  text-align: center;
+}

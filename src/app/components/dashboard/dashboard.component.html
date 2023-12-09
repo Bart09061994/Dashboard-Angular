@@ -1,0 +1,75 @@
+<div class="dashboard-container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/">
+      <img
+        src="assets/img/vecteezy_creative-abstract-black-silhouette-running-shoe-design-logo_8956590_131/vecteezy_creative-abstract-black-silhouette-running-shoe-design-logo_8956590.jpg"
+        alt="Logo del sito"
+        width="200"
+        height="100%"
+      />
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarContent"
+      aria-controls="navbarContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ml-auto p-5">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">About</a>
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <mat-drawer-container class="example-container">
+    <mat-drawer class="sidenav" mode="side" opened>
+      <nav class="navbar bg-light d-flex flex-column">
+        <div class="nav h-100">
+          <mat-icon class="login" routerLink="/login"> login </mat-icon>
+          <ng-container
+            class="d-flex justify-content-center align-items-center"
+            *ngIf="AuthService.isAuthenticated(); else notAuth"
+          >
+            <i class="material-icons">account_circle</i>
+          </ng-container>
+          <ng-template #notAuth>
+            <button type="button" class="btn btn-success custom-btn">
+              <a class="nav-link" routerLink="/signUp">SignUp</a>
+            </button>
+          </ng-template>
+          <mat-icon class="logout" (click)="onLogOut()">logout</mat-icon>
+        </div>
+        <div class="container-link">
+          <mat-sidenav-container style="height: 80vh">
+            <mat-sidenav mode="side" opened>
+              <mat-sidenav-container style="height: 80vh">
+                <mat-sidenav mode="side" opened>
+                  <div *ngFor="let store of storeCards">
+                    <div class="link-container">
+                      <button class="link" [routerLink]="['/store', store.id]">
+                        {{ store.name }}
+                      </button>
+                    </div>
+                  </div>
+                </mat-sidenav>
+              </mat-sidenav-container>
+            </mat-sidenav>
+          </mat-sidenav-container>
+        </div>
+      </nav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

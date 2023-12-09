@@ -1,0 +1,29 @@
+<div class="container">
+  <h2>Nuovo Store</h2>
+  <form>
+    <label>Nome:</label>
+    <input
+      type="text"
+      [(ngModel)]="newStore.name"
+      [ngModelOptions]="{ standalone: true }"
+      required
+    />
+
+    <label>Immagine:</label>
+    <input
+      type="text"
+      [(ngModel)]="newStore.imgSrc"
+      [ngModelOptions]="{ standalone: true }"
+      required
+    />
+
+    <label>Dettagli:</label>
+    <textarea
+      [(ngModel)]="newStore.detail"
+      [ngModelOptions]="{ standalone: true }"
+      required
+    ></textarea>
+
+    <button type="button" (click)="createNewStore(newStore)">Crea Store</button>
+  </form>
+</div>
